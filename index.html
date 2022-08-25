@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- CSS Linked    -->
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card-component">
+        <div class="card-preview">
+          <div class="card-back">
+            <!-- <img src="./images/bg-card-back.png" alt="card back" /> -->
+            <span class="cvc-no">000</span>
+          </div>
+          <div class="card-front">
+            <!-- <img src="./images/bg-card-front.png" alt="card front" /> -->
+            <img src="./images/card-logo.svg" alt="" class="logo" />
+            <div class="card-info">
+              <span class="c-no">0000 0000 0000 0000</span>
+              <div class="name-expiry">
+                <h1 class="c-name">JANE APPLESEED</h1>
+                <div class="e-date">
+                  <span class="mm">00</span>/ <span class="yy">00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <form class="card-details-form" action="">
+            <div class="card-name">
+              <label for="name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                maxlength="20"
+                placeholder="e.g. Jane Appleseed"
+                onchange="setCard(event)"
+                required
+              />
+            </div>
+            <div class="card-num">
+              <label for="card-number">CARD NUMBER</label>
+              <input
+                type="text"
+                name="cardNumber"
+                id="card-number"
+                onchange="validateNumber(event)"
+                maxlength="16"
+                placeholder="e.g. 1234 5678 9123 0000"
+                required
+              />
+              <span class="error">Wrong Format, numbers only</span>
+            </div>
+            <div class="form-group">
+              <div class="exp">
+                <label for="expiry-date">EXP. DATE (MM/YY)</label>
+                <div class="group">
+                  <input
+                    type="text"
+                    id="month"
+                    class="month"
+                    maxlength="2"
+                    placeholder="MM"
+                    onkeydown="validate(event)"
+                    onchange="setCard(event)"
+                    required
+                  />
+                  <input
+                    type="text"
+                    class="year"
+                    id="year"
+                    maxlength="2"
+                    placeholder="YY"
+                    onkeydown="validate(event)"
+                    onchange="setCard(event)"
+                    required
+                  />
+                </div>
+                <span class="error">Can't be blank</span>
+              </div>
+              <div class="cvc">
+                <label for="CVC">CVC</label>
+                <input
+                  type="text"
+                  id="CVC"
+                  class="cv-no"                  
+                  maxlength="3"
+                  placeholder="e.g. 123"
+                  onkeydown="validateCvc(event)"
+                  onchange="setCard(event)"
+                  required
+                />
+                <span class="error">Can't be blank</span>
+              </div>
+            </div>
+            <button class="confirmBtn" type="submit">Confirm</button>
+          </form>
+          <div class="thankYou-card">
+            <img src="./images/icon-complete.svg" alt="" />
+            <div class="message">
+              <h1 class="heading">THANK YOU</h1>
+              <span class="caption">We've added your card details</span>
+            </div>
+            <a href=""><button class="continueBtn">Continue</button></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer  -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <!-- JS Linked  -->
+    <script src="./script.js"></script>
+  </body>
+</html>
