@@ -177,7 +177,7 @@ main {
       max-height: 100%;
       width: 100%;
       align-items: center;
-      justify-content: center;      
+      justify-content: center;
     }
     .card-details-form {
       display: flex;
@@ -269,7 +269,7 @@ footer {
   flex-flow: column;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;  
+  padding: 2rem;
   .message {
     text-align: center;
     .heading {
@@ -281,19 +281,16 @@ footer {
       color: $Darkgrayishviolet;
     }
   }
-  a {
+  .continueBtn {
+    cursor: pointer;
     width: 100%;
-    .continueBtn {
-      cursor: pointer;
-      width: 100%;
-      padding: 1rem;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      color: white;
-      background: $Verydarkviolet;
-    }
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: white;
+    background: $Verydarkviolet;
   }
 }
 

@@ -452,11 +452,7 @@ footer {
   color: #8e8593;
 }
 
-.thankYou-card a {
-  width: 100%;
-}
-
-.thankYou-card a .continueBtn {
+.thankYou-card .continueBtn {
   cursor: pointer;
   width: 100%;
   padding: 1rem;

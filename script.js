@@ -67,9 +67,14 @@ confirmBtn.addEventListener("click", (e) => {
   const inputs = [...document.querySelectorAll("input")];
 
   inputs.forEach((input) => {
-    console.log(input.value);
     if (input.value != "") {
       right.classList.add("active");
     }
   });
+});
+
+// clicking on continue
+const continueBtn = document.querySelector(".continueBtn");
+continueBtn.addEventListener("click", () => {
+  location.reload();
 });
